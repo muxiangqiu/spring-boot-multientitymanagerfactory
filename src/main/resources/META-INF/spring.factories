@@ -1,0 +1,11 @@
+# Auto Configure
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+org.malagu.multientitymanagerfactory.HibernateJpaAutoConfiguration,\
+org.malagu.multientitymanagerfactory.HibernateJpaAutoConfiguration1,\
+org.malagu.multientitymanagerfactory.HibernateJpaAutoConfiguration2,\
+org.malagu.multientitymanagerfactory.HibernateJpaAutoConfiguration3,\
+org.malagu.multientitymanagerfactory.HibernateJpaAutoConfiguration4,\
+org.malagu.multientitymanagerfactory.HibernateJpaAutoConfiguration5,\
+org.malagu.multientitymanagerfactory.HibernateJpaAutoConfiguration6
+
+
