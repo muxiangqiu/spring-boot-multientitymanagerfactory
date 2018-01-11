@@ -13,6 +13,7 @@ import org.springframework.boot.autoconfigure.AutoConfigureAfter;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.orm.jpa.JpaProperties;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.orm.jpa.EntityManagerFactoryBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Conditional;
@@ -40,7 +41,6 @@ public class HibernateJpaAutoConfiguration extends HibernateJpaBaseConfiguration
 	@Qualifier(DataSources.dataSource)
 	private DataSource dataSource;
 	
-	@Autowired
 	private JpaProperties jpaProperties;
 	
 	
@@ -55,7 +55,10 @@ public class HibernateJpaAutoConfiguration extends HibernateJpaBaseConfiguration
 	}
 
 	@Override
+	@Bean("jpaProperties")
+	@ConfigurationProperties(prefix = "spring.jpa")
 	public JpaProperties getJpaProperties() {
+		this.jpaProperties = new JpaProperties();
 		return jpaProperties;
 	}
 	

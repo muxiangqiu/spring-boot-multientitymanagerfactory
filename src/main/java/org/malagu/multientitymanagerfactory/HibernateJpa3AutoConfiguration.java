@@ -41,7 +41,6 @@ public class HibernateJpa3AutoConfiguration extends HibernateJpaBaseConfiguratio
 	@Qualifier(DataSources.dataSource3)
 	private DataSource dataSource;
 	
-	@Autowired
 	private JpaProperties jpaProperties;
 	
 	
